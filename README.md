@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# BasedAgent: Code Less, Make More
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to BasedAgent, the perfect companion for autonomous software engineers aiming to contribute to the Morpheus project. BasedAgent is powered by AI and Large Language Models, collaborating with developers to write code, fix bugs, and ship features efficiently.
 
-## Available Scripts
+## ⚡ Getting Started
 
-In the project directory, you can run:
+To start using BasedAgent within a Docker container, run the following commands:
 
-### `npm start`
+```bash
+# Set your workspace directory; must be an absolute path!
+export WORKSPACE_BASE=$(pwd)/workspace;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+docker run -it \
+    --pull=always \
+    -e SANDBOX_USER_ID=$(id -u) \
+    -e PERSIST_SANDBOX="true" \
+    -e SSH_PASSWORD="make something up here" \
+    -e WORKSPACE_MOUNT_PATH=$WORKSPACE_BASE \
+    -v $WORKSPACE_BASE:/opt/workspace_base \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -p 3000:3000 \
+    --add-host host.docker.internal:host-gateway \
+    --name basedagent-app-$(date +%Y%m%d%H%M%S) \
+    ghcr.io/basedagent/basedagent:0.6
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Access BasedAgent at [http://localhost:3000](http://localhost:3000).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📚 Documentation
+For more about the project and tips on using BasedAgent, visit [basedagent.co](http://basedagent.co).
 
-### `npm run build`
+## 🤝 How to Contribute
+Contribute to BasedAgent by developing new features, participating in model evaluations, or improving our tools. Your involvement helps advance software engineering with AI.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🌐 Join Our Community
+Join our [Discord](https://discord.gg/ytRUMVrcj2) to engage in discussions, ask questions, and connect with others enthusiastic about software engineering improvements.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 License
+Distributed under the MIT License.
