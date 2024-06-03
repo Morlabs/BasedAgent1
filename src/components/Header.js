@@ -11,15 +11,31 @@ function Header() {
 
   return (
     <div className="navbar">
+      <div className="navbar-logo">
+        <Link to="/">
+          <img className="logo" src="/Based_Agent_logo_small.png" alt="Based Agent Logo" />
+        </Link>
+      </div>
       <div className="navbar-desktop">
         <div className="dropdown">
           <Link to="#">About Based Agent</Link>
           <div className="dropdown-content">
             <Link to="/about">About</Link>
             <Link to="/baag-token">BAAG Token</Link>
-            <Link to="/protection-fund">Protection Fund</Link>
-            <a href="https://github.com/Morlabs/BasedAgent1/blob/main/README.md#based-agent-protection-fund" target="_blank" rel="noopener noreferrer">Protection Fund</a>
-            <a href="https://mor.org/MOR20" target="_blank" rel="noopener noreferrer">MOR20 Platform</a>
+            <a
+              href="https://github.com/Morlabs/BasedAgent1/blob/main/README.md#based-agent-protection-fund"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Protection Fund
+            </a>
+            <a
+              href="https://mor.org/MOR20"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MOR20 Platform
+            </a>
           </div>
         </div>
         <a href="https://github.com/Morlabs/BasedAgent/blob/main/Contribute/contribution_guidelines.md">Contribute</a>
@@ -32,7 +48,7 @@ function Header() {
         </div>
       </div>
       <div className="navbar-mobile">
-        <span className="hamburger" onClick={toggleMenu}>&#9776;</span>
+        <span className="hamburger" onClick={toggleMenu}>MENU</span>
         <div className={`navbar-menu ${menuActive ? 'active' : ''}`}>
           <div className="dropdown">
             <Link to="#" onClick={toggleMenu}>About Based Agent</Link>
@@ -48,7 +64,9 @@ function Header() {
           <div className="dropdown">
             <Link to="#" onClick={toggleMenu}>Resources</Link>
             <div className="dropdown-content">
-              <a href="https://github.com/Morlabs/BasedAgent1/blob/main/README.md" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>Docs</a>
+              <a
+                href="https://github.com/Morlabs/BasedAgent1/blob/main/README.md"
+                target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>Docs</a>
               <Link to="/faqs" onClick={toggleMenu}>FAQs</Link>
             </div>
           </div>

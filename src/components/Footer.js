@@ -8,7 +8,7 @@ function Footer() {
         <img src="/morpheus_ecosystem.png" alt="Morpheus Ecosystem" />
       </div>
       <div className="footer-right">
-        <a href="https://x.com/basedagent" target="_blank" rel="noopener noreferrer">
+        <a href="https://x.com/Based_Agent_AI" target="_blank" rel="noopener noreferrer">
           <img src="/x_logo_small.png" alt="X Logo" />
         </a>
         <a href="https://discord.gg/KBD3XBmNUf" target="_blank" rel="noopener noreferrer">
