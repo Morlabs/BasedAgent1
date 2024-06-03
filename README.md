@@ -24,7 +24,7 @@ docker run -it \
     ghcr.io/basedagent/basedagent:0.6
 
 
-Access BasedAgent at [http://localhost:3000](http://localhost:3000).
+## Access BasedAgent at [http://localhost:3000](http://localhost:3000).
 
 ## 📚 Documentation
 For more about the project and tips on using BasedAgent, visit [basedagent.co](http://basedagent.co).
