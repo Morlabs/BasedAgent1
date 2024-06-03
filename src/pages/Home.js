@@ -22,8 +22,9 @@ function Home() {
         <img src="/Based_Agent_logo.png" alt="Based Agent Logo" />
         <h1>AI Coding Assistant</h1>
         <p>
-          Built by Mor Labs, Based Agent is an innovative AI coding assistant for developers to turbocharge their productivity. It's built primarily for developers building web3 and AI applications.
-        </p>
+  Built by <a href="https://morlabs.xyz/">Mor Labs</a>, Based Agent is an innovative AI coding assistant for coders contributing to the Morpheus ecosystem to turbocharge their productivity. Whether you're just getting started with coding or a seasoned pro, Based Agent is here to help you do more, faster.
+</p>
+
         <form action="https://formspree.io/f/mqkrjnyg" method="POST" className="email-form">
           <input type="email" name="email" placeholder="Email Address" required />
           <input type="submit" value="Join Waitlist" />

@@ -16,19 +16,18 @@ function BAAGToken() {
           </div>
           <div className="column">
             <p>The BAAG supply is limited to a maximum of 42,000,000 tokens that will ever exist.</p>
-            <p>For a detailed breakdown of the BAAG tokenomics, <a href="#https://google.com">read the BAAG Whitepaper Here →</a></p>
           </div>
         </section>
         <section className="utility-section">
           <div className="column">
             <h2>BAAG Utility</h2>
-            <p>Stake BAAG to access inference and bootstrap projects</p>
+            <p>BAAG token governs, prioritizes reviews, assures quality, transacts.</p>
           </div>
           <div className="column">
-            <p>The main utility of the BAAG is staking for access to a pro-rata amount of the Morpheus network's compute resources.</p>
-            <p>From the Metropolis phase onwards, you will also be able to stake BAAG towards frontends and smart agents you like, thereby directing community emissions to them and be rewarded in their native tokens.</p>
-            <p>Additionally, BAAG will be the main asset for AI projects launched in the Morpheus ecosystem, like ETH for Ethereum.</p>
-            <p>Finally, all settlements between parties in the Morpheus Network are also in BAAG.</p>
+          <p>The BAAG token primarily serves as the governance token for Based Agent, playing a crucial role in steering the platform's development and operational strategies.</p>
+            <p>Starting from the Ubud phase, users will have the opportunity to stake BAAG tokens to gain priority access to code reviews. The amount of BAAG staked directly correlates with the speed and priority of the review process, ensuring faster feedback and integration for developers who are committed to rapid development cycles.</p>
+            <p>BAAG tokens also function as a form of collateral that reviewers can post as a guarantee of the quality and integrity of their reviews. This collateral is at risk of being slashed if a review is subsequently found to be incorrect or introduces a critical error, thereby enforcing high standards and accountability within the review process.</p>
+            <p>BAAG is the designated currency for all settlements between parties that directly contribute to the Based Agent ecosystem, facilitating a streamlined and unified transaction process.</p>
           </div>
         </section>
         <section className="distribution-section">
@@ -39,10 +38,11 @@ function BAAGToken() {
           <div className="column">
             <p>The distribution will start with four Morpheus contributor groups earning the tokens by providing forms of proof of work (labor) and proof of stake (capital) to the network:</p>
             <ul>
-              <li>→ 24% to coders</li>
-              <li>→ 24% to capital</li>
-              <li>→ 24% to the community</li>
-              <li>→ 4% for protection funds</li>
+              <li>→ 25% to Reviewers</li>
+              <li>→ 25% to Builders</li>
+              <li>→ 30% to Capital</li>
+              <li>→ 16% to Community</li>
+              <li>→ 4% to Protection</li>
             </ul>
             <div className="distribution-graphic">
               <img src="/baag_distribution_chart.png" alt="BAAG Distribution Graphic" />
