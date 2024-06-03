@@ -6,9 +6,9 @@ Welcome to BasedAgent, the perfect companion for autonomous software engineers a
 
 To start using BasedAgent within a Docker container, run the following commands:
 
-```bash
-# Set your workspace directory; must be an absolute path!
+# The directory you want BasedAgent to work with. MUST be an absolute path!
 export WORKSPACE_BASE=$(pwd)/workspace;
+
 
 docker run -it \
     --pull=always \
