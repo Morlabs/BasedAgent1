@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -73,6 +79,10 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  .mobile-navbar {
+      display: none;
+    }
 
   .navbar-menu {
     display: none; /* Hide menu by default */
@@ -333,14 +343,17 @@ body {
     transform: translateY(-50%);
   }
 
-  .navbar-logo img {
+  .navbar-logo img, .logo {
     width: 50px;
     height: auto;
     object-fit: cover;
   }
 
+
+
   /* Desktop view */
   @media (min-width: 769px) {
+
     .navbar-desktop {
       display: flex;
       justify-content: center;
@@ -355,7 +368,101 @@ body {
 
   /* Mobile view */
   @media (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
+
+    .mobile-navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 15px;
+      position: relative;
+    }
+
+    .mobile-navlinks {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mobile-navlinks section {
+      margin: 0;
+    }
+
+    .mobile-link {
+      margin: 0;
+    }
+
+    .mobile-link p {
+      padding: 15px 0;
+    }
+
+    .icon-placer {
+      display: flex;
+      cursor: pointer;
+      transition: color 200ms ease-out;
+    }
+
+    .icon-placer:hover {
+      color: #fff;
+    }
+
+    .mobile-link-title {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .mobile-link .child-links {
+      padding-left: 20px;
+      display:inline-flex;
+      gap: 10px;
+      flex-direction: column;
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    .child-links .hyperlink {
+      color: #494949;
+    }
+
+    .responsive-drawer {
+      border-left: 2px solid #f2f2f2;
+      border-bottom: 2px solid #f2f2f2;
+      background: #64D894;
+      /* background: white; */
+      padding: 10px;
+      color: #1a1a1a;
+      border-bottom-left-radius: 20px;
+      position: fixed;
+      right: 0;
+      width: 60%;
+      height: 90vh;
+      z-index: 2;
+      top: 0;
+  }
+
+    .menu-button {
+      border: none;
+      border-radius: 5px;
+      background: whitesmoke;
+      padding: 2px 5px;
+      cursor: pointer;
+      transition: 200ms ease-in background;
+    }
+
+    .menu-button:hover {
+      background: #64D894;
+    }
+
     .navbar {
+      display: none;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -508,6 +615,14 @@ body {
     font-size: 18px;
     margin-bottom: 10px;
   }
+  /* OVERRIDE NATIVE STYLING FOR MOBILE DRAWER */
+  .hyperlink {
+    color: #1a1a1a;
+    width: max-content;
+  }
+
+
+  /* END OF OVERRIDE */
 
   .distribution-graphic, .emission-chart {
     text-align: center;
